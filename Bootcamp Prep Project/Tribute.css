@@ -1,0 +1,409 @@
+/* =======================================
+   GLOBAL
+======================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f5f5;
+    color:#222;
+    line-height:1.8;
+}
+
+/* =======================================
+   NAVIGATION
+======================================= */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#111;
+    z-index:1000;
+}
+
+nav{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+}
+
+nav h2{
+    color:#FFD700;
+    letter-spacing:2px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+    font-weight:500;
+}
+
+nav a:hover{
+    color:#FFD700;
+}
+
+/* =======================================
+   HERO
+======================================= */
+
+.hero{
+    height:100vh;
+
+    background:
+        linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.55)),
+        url("images/pele-hero.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:flex-start;
+    align-items:flex-start;
+    text-align:center;
+
+    color:white;
+}
+
+.hero-text{
+    max-width:800px;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:6rem;
+    letter-spacing:5px;
+}
+
+.hero h3{
+    font-size:2rem;
+    color:#FFD700;
+    margin:15px 0;
+}
+
+.hero p{
+    font-style:italic;
+    font-size:1.2rem;
+}
+
+/* =======================================
+   SECTIONS
+======================================= */
+
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:90px 30px;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#FFD700;
+    font-size:2.3rem;
+}
+
+/* =======================================
+   BIOGRAPHY
+======================================= */
+
+figure{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+figure img{
+    width:100%;
+    max-width:450px;
+
+    border-radius:12px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+figcaption{
+    margin-top:10px;
+    font-style:italic;
+    color:#555;
+}
+
+article p{
+    margin-bottom:20px;
+}
+
+/* =======================================
+   TIMELINE
+======================================= */
+
+.timeline{
+    list-style:none;
+}
+
+.timeline li{
+    background:white;
+    margin:15px 0;
+    padding:18px 22px;
+
+    border-left:6px solid #FFD700;
+
+    border-radius:8px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.timeline li:hover{
+    transform:translateX(8px);
+}
+
+/* =======================================
+   TABLE
+======================================= */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.12);
+}
+
+th{
+    background:#FFD700;
+    color:white;
+}
+
+th,
+td{
+    padding:15px;
+    border:1px solid #ddd;
+    text-align:center;
+}
+
+tr:nth-child(even){
+    background:#f8f8f8;
+}
+
+tr:hover{
+    background:#fff8dc;
+}
+
+/* =======================================
+   CARDS
+======================================= */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+.card{
+
+    background:white;
+
+    padding:30px;
+
+    text-align:center;
+
+    border-radius:12px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.card h3{
+
+    font-size:2.5rem;
+
+    margin-bottom:15px;
+
+}
+
+/* =======================================
+   FUN FACTS
+======================================= */
+
+#facts h3{
+
+    color:#FFD700;
+
+    margin-top:30px;
+
+    margin-bottom:10px;
+
+}
+
+/* =======================================
+   LINKS
+======================================= */
+
+.links{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+}
+
+.links a{
+
+    text-decoration:none;
+
+    background:#FFD700;
+
+    color:white;
+
+    padding:15px 30px;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+.links a:hover{
+
+    background:#FFD700;
+
+    color:#111;
+
+}
+
+/* =======================================
+   FOOTER
+======================================= */
+
+footer{
+
+    background:#111;
+
+    color:white;
+
+    text-align:center;
+
+    padding:35px;
+
+}
+
+footer p{
+
+    margin:8px;
+
+}
+
+/* =======================================
+   RESPONSIVE
+======================================= */
+
+@media(max-width:900px){
+
+    nav{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+    nav ul{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .hero h1{
+
+        font-size:4rem;
+
+    }
+
+    .hero h3{
+
+        font-size:1.5rem;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    section{
+
+        padding:70px 20px;
+
+    }
+
+    .hero h1{
+
+        font-size:3rem;
+
+    }
+
+    .hero h3{
+
+        font-size:1.2rem;
+
+    }
+
+    .hero p{
+
+        font-size:1rem;
+
+    }
+
+    table{
+
+        font-size:.9rem;
+
+    }
+
+    th,
+    td{
+
+        padding:10px;
+
+    }
+
+}
